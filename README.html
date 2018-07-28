@@ -1,0 +1,79 @@
+# Become-a-better-developer
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Tips for responsive design</title>
+	<style>
+		#description {
+			
+border: 2px; dashed: #ffffff;
+box-shadow: 0 0 12px 12px #0600ff;
+
+		}
+		body {
+			background-color:antiquewhite;
+		}
+	 img, embed, object, video {
+		 max-width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	
+<h1 id="description">Here are some useful tips for help your website become more responsive! </h1>
+	<div>
+	
+	<h2>There is a difference between DEVICE INDEPEDENT PIXAL and HARDWARE PIXEL</h2>
+		<h3>Device independent pixal</h3>
+		
+		<ul style="list-style-type:square">
+  			<li>This is the amount of pixels that you mobile browser will actually give you.</li>
+  			<li>Will take up the same about of of space regardless of the pixel density of the display.</li>
+  			<li>Usually half of the amount of hardware pixels</li>
+		</ul>
+	</div>
+	
+	<div>
+		<h4>Hardware Pixels</h4>
+		<ul style="list-style-type:square">
+  				<li>This is the unit of pixel that is your hardware.(ex. Computer, phone, ipad)</li>
+  				<li>We have to tell the broswer that mobile devices have different pixel limits</li>
+  				<li>Prevent the browser from font boosting by <i>Calculating Viewport Width</i></li>
+		</ul>
+	
+	</div>
+	
+	<div>
+	<h2>Calculating Viewport Width</h2>
+		<ul>
+			<li>To get the the Width (in dips) remember to dive by 1/2 dividing the number of physical pixels by the number of Device Pixel Ratio!</li>
+			<li>Remember that DPR is is the amount of Dips it will take per pixel</li>
+		
+		</ul>
+	
+	</div>
+	
+	<div>
+	<h2>Setting the Viewpoint in your html code!</h2>
+		<ul>
+			<li>In order to set the view point we use a special code <b>&lt;meta name="viewport"content="width=device-width,initial-scale=1"&gt;</b> </li>
+			<li>By setting initial-scale=1 we are telling the broswer to establish a 1 to 1 ratio between device independent pixels and and CSS pixels.</li>
+			<li>CSS pixels are what we all are used to working with most of the time</li>
+			<li>Setting it to a 1:1 ration we tell the browser to keep the page constant while rotating to landscape mode. </li>
+			<li>It is important to use relative units instead of absolute units "img, embed, object, video {}"
+				max-width: 100%;
+				<img src="https://bitsofco.de/content/images/2016/04/not-1.png" alt="Example of this problem" class="Viewpoint-pic"</li>
+				<li>Finally, another tip to know is that fingers are about 40pixels wide so it is important to keep that in mind and when setting up for clickable links or buttons. It is reccomened that we use 48px wide by 48px tall.</li>
+				<li>Make sure that buttons are 40px apart from each other so it would look like this for a button &lt;nav a, button { min-width: 48px; min-height: 48px;} &gt;</li>
+				<li>Start off by thinking about and optimizing for smaller devices first, then move on to bigger devices like an ipad finally you can start optimizing for a laptop or desktop. This will allow us to prioritize the key content</li>
+		
+		</ul>
+	
+	</div>
+	
+</body>
+</html>
